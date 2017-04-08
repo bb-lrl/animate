@@ -1,0 +1,22 @@
+html,body{width: 100%;height: 100%;background:#f4f4f4;}
+.wrap{width: 100%;height: 100%;background:#f4f4f4;}
+.ul1{width: 100%;height: 3.5rem;overflow: hidden;background:#fff;border-bottom:1px solid #D9D9D9 ;}
+.ul1 li{width: 50%;height:3.5rem;line-height:3.5rem;text-align: center;margin-left: -1px;font-size:1rem;float: left;box-sizing: border-box;}
+.ul1 li a{height: 2rem;display: block;margin-top: 0.75rem;width:100%;line-height: 2rem;border-left: 1px solid #999;color:#767575;}
+.ul1 .xxx{border-bottom: 2px solid #1dbf02;}
+.ul1 .yyy{color:#1dbf02;}
+.big_box{width: 90%;margin:4rem auto 0;background:#fff;}
+.hui_box{width: 100%;height: 4rem;text-align: center;line-height: 4rem;background:#e8e8e8;font-size:0.95rem;color:#4fa8fb;}
+.txje{color:#333;font-size:0.95rem;margin-left: 1rem;margin-top: 4rem;}
+.xjin{overflow: hidden;font-size:2rem;color:#333;margin-left: 1rem;height: 2rem;margin-top: 1rem;line-height: 2rem;}
+.xjin span{float: left;}
+.xjin input{float: left;width: 10rem;height: 2rem;padding-left: 10px;line-height: 2rem;box-sizing: border-box;font-size:1rem;outline-style: none;}
+.has_box{margin-top: 1.2rem;margin-left: 1rem;width: 90%;color:#666;font-size:0.85rem;border-top: 1px solid #dad8d8;line-height: 3rem;}
+.sure_box{width: 80%;height: 2.5rem;border-radius:3rem;color:#dcf8d7;font-size:1.15rem;background:#a4da9b;text-align: center;line-height: 2.5rem;margin:6rem auto 0;}
+.tyh{line-height: 2.3rem;}
+.syhk{line-height: 1rem;color:#333;}
+.zj_bglayer{width: 100%;height: 100%;background:rgba(0,0,0,0.5);position:fixed;left:0;top:0;left:0;top:0;z-index: 2;display: none;}
+.bai_layer{width: 16rem;background:#fff;position:absolute;left:50%;margin-left: -8rem;padding-top: 2.2rem;padding-bottom: 2.2rem;top:50%;margin-top: -9.1rem;border-radius: 10px;}
+.del{width: 2rem;height: 2rem;background:url(../images/del.png) no-repeat center center;background-size:contain;position:absolute;top:0;right:1rem;}
+.xiaol{margin:0 auto;width: 4rem;height: 4rem;background:url(../images/gou.png) no-repeat center center;background-size:contain;}
+.zyshl{color:#666;font-size:1rem;text-align: center;overflow: hidden;width: 10rem;margin:2rem auto 0;}

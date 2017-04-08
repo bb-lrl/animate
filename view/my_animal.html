@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <title>好友列表</title>
+        <link rel="stylesheet" href="../resource/css/global.css" />
+        <link rel="stylesheet" href="../resource/css/my_animal.css" />
+        <script type="text/javascript" src="../resource/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <div class="yizu">
+            <div class="left_box"></div>
+            <div class="center_box">
+                <div class="name_box">木木</div>
+                <div class="number_box">1000只</div>
+            </div>
+            <div class="right_box"></div>
+        </div>
+        <div class="yizu">
+            <div class="left_box"></div>
+            <div class="center_box">
+                <div class="name_box">木木</div>
+                <div class="number_box">1000只</div>
+            </div>
+            <div class="right_box"></div>
+        </div>
+    </div>
+    <!-- 好友动物列表 -->
+    <div class="animal_box ">
+        <div class="box_animal">
+            <div class="tit_box"></div>
+            <!-- 可收获 -->
+            <div class="dong_zu">
+                <div class="tu">
+                    <img src="" alt="" />
+                </div>
+                <div class="zi">可收获</div>
+            </div>
+            <!-- 可收获结束 -->
+            <!-- 不可收获 -->
+            <div class="dong_zu">
+                <div class="tu">
+                    <img src="" alt="" />
+                </div>
+                <div class="zizi">
+                    <p class="yyang">已养10天</p>
+                    <p class="hxu">还需要6天可成熟</p>
+                </div>
+            </div>
+             <!-- 不可收获结束 -->
+            <div class="yjsh">一键偷取</div>
+        </div>
+    </div>
+    <!-- 好友动物列表结束 -->
+    <!-- 一键偷取弹框 -->
+    <div class="zj_bglayer">
+        <div class="bai_layer">
+            <div class="del"></div>
+            <div class="xiaol"></div>
+            <p class="zyshl">偷取成功</p>
+            <div class="yhp">已获得<span>1000</span>积分，已自动</div>
+            <div class="yhp">转换现金<span>1000</span>元，复投币<span>10</span>个</div>
+            <div class="yhsh">再偷一家</div>
+        </div>
+    </div>
+    <!-- 一键偷取弹框结束 -->
+</body>
+</html>
+<script type="text/javascript" src="../resource/js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.right_box').click(function(event) {
+                $('.animal_box').show();
+        });
+        $(document).on('click','.yjsh',function(){
+            $('.animal_box').hide();
+            $('.zj_bglayer').show();
+        })
+        $(document).on('click','.del',function(){
+            $('.animal_box').hide();
+            $('.zj_bglayer').hide();
+        })
+         $(document).on('click','.yhsh',function(){
+            $('.animal_box').hide();
+            $('.zj_bglayer').hide();
+        })
+         $(document).on('click','.tit_box',function(){
+            $('.animal_box').hide();
+         })
+    })
+</script>

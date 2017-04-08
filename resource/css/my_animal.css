@@ -1,0 +1,29 @@
+html,body{width: 100%;height: 100%;background: #f4f4f4;}
+.wrap{width: 100%;height: 100%;background:#f4f4f4;}
+.yizu{overflow: hidden;height: 4.2rem;background:#fff;border-bottom: 1px solid #dad8d8;padding-left: 1rem;padding-right: 0.7rem;box-sizing: border-box;}
+.left_box{float: left;width: 3rem;height: 3rem;margin-top:0.6rem;border-radius: 3rem;border:1px solid #333;}
+.left_box img{width: 3rem;height: 3rem;border-radius: 3rem;}
+.center_box{float: left;margin-left: 1rem;}
+.name_box{color:#333;font-size: 1rem;margin-top: 0.7rem;}
+.number_box{color:#666;font-size:1rem;}
+.right_box{float: right;width: 5rem;height: 2.3rem;background:url(../images/lvbg.png) no-repeat center center;background-size:contain;margin-top:0.85rem;}
+.yizu:last-of-type{border-bottom: 0 none;}
+.animal_box{width: 100%;height: 100%;background:rgba(0,0,0,0.5);position:fixed;left:0;top:0;z-index: 2;display: none;}
+.box_animal{width: 85%;background:#e5e4e4;margin:1rem auto 0;position:relative;padding-top: 2.6rem;padding-bottom: 2.6rem;}
+.tit_box{background:#e5e4e4;width: 100%;position:absolute;top:0;right:1rem;width: 2rem;height: 2rem;background:url(../images/del.png) no-repeat center center;background-size:contain;}
+.dong_zu{overflow: hidden;background:#fff;border-bottom: 1px solid #e5e4e4;height: 4rem;padding:0 1rem;box-sizing: border-box;}
+.tu{width: 3rem;height: 3rem;border-radius: 3rem;margin-top: 0.5rem;float: left;border:1px solid #c69657;}
+.tu img{width: 3rem;height: 3rem;border-radius: 3rem;}
+.zi{float: right;line-height: 3.8rem;color:#1dca00;font-size:1.1rem;width: 8rem;text-align: center;}
+.zizi{float: right;width: 8rem;line-height: 1.9rem;}
+.yyang{text-align: center;color:#333;font-size:1.1rem;}
+.hxu{text-align: center;color:#666;font-size:1rem;}
+.yjsh{width: 14rem;height: 3rem;margin:3rem auto 0;background:#1dca00;border-radius: 3rem;color:#fff;font-size:1.3rem;line-height: 3rem;text-align: center;}
+.zj_bglayer{width: 100%;height: 100%;background:rgba(0,0,0,0.5);position:fixed;left:0;top:0;left:0;top:0;z-index: 2;display: none;}
+.bai_layer{width: 16rem;background:#fff;position:absolute;left:50%;margin-left: -8rem;padding-top: 2.2rem;padding-bottom: 2.2rem;top:50%;margin-top: -9.1rem;}
+.del{width: 2rem;height: 2rem;background:url(../images/del.png) no-repeat center center;background-size:contain;position:absolute;top:0;right:1rem;}
+.xiaol{margin:0 auto;width: 4rem;height: 4rem;background:url(../images/jianxiao.png) no-repeat center center;background-size:contain;}
+.zyshl{color:#666;font-size:1rem;text-align: center;margin-top: 10px;}
+.yhp{text-align: center;font-size:0.8rem;color:#666;}
+.yhp span{color:#1dca00;font-size:1rem;}
+.yhsh{width: 12rem;height:2.3rem;margin:3rem auto 0;background:#1dca00;border-radius: 3rem;color:#fff;font-size:1.1rem;line-height: 2.3rem;text-align: center;}

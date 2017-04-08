@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <title>修改资料</title>
+        <link rel="stylesheet" href="../resource/css/global.css" />
+        <link rel="stylesheet" href="../resource/css/my_modify.css" />
+        <script type="text/javascript" src="../resource/js/jquery-1.11.1.min.js"></script>
+    </head>
+    <body>
+        <!-- 修改页面开始 -->
+        <div class="wrap">
+            <div class="bai_box">
+                <div class="yizu yizu1">
+                    <span class="touxiang">头像</span>
+                    <div class="tou" >
+                        <img src="../resource/images/touxiang.png"  id="bg"/>
+                    </div>
+                </div>
+                    <div class="yizu">
+                        <span class="touxiang">昵称</span>
+                        <div class="mz">
+                            <input type="text" value="燕子" name="nick" onchange='check1()'/>
+                        </div>
+                    </div>
+                    <div class="yizu">
+                        <span class="touxiang">手机号</span>
+                        <div class="mz">
+                            <input type="text" placeholder="手机号" name="username" value="1364230000" onchange='check2()'/>
+                        </div>
+                    </div>
+                    <div class="yizu">
+                        <span class="touxiang">性别</span>
+                        <div class="lia">
+                            <div class="nansex nansex1 <if condition='$sex eq 0'>color_nv</if> ">
+                                <input type="radio" name="sex" class="wui" value="0" id="nv" />
+                                <label for="nv" class="nvde" >女</label>
+                            </div>
+                            <div class="nansex nansex2">
+                                <input type="radio" name="sex" class="wui " value="1" id="nan" />
+                                <label for="nan" class="nande" style="margin-right:10px;">男</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="yizu">
+                        <span class="touxiang">地区</span>
+                        <div class="mz">
+                           <select name="" id="">
+                               <option value="">广州</option>
+                           </select>
+                           <select name="" id="">
+                               <option value="">天河</option>
+                           </select>
+                           <select name="" id="">
+                               <option value="">车陂</option>
+                           </select>
+                        </div>
+                    </div>
+                    <div class="yizu">
+                        <span class="touxiang">详细地址</span>
+                        <div class="mz">
+                          <textarea name="" id="" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="yizu" onclick='javascript:location.href="new_bank.html"'>
+                        <span class="touxiang">银行卡</span>
+                        <div class="mz">
+                          <div class="bank"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="sure_box" >确定</div>
+        </div>
+        <!-- 修改页面结束 -->
+        <!--加载头像资源开始-->
+        <div class="big_box">
+            <div class="lazy_tip" id="lazy_tip"><span></span><br>   </div>
+            <div class="resource_lazy hide"></div>
+            <div class="pic_edit">
+                <div id="clipArea"></div>
+                <div class="aaaa">
+                    <input type="file" id="file" />
+                    <span>选择图片</span>
+                </div>
+                <button id="clipBtn" style="display:block;">上传图片</button>
+                <input type="file" id="file" style="opacity: 0;position: fixed;bottom: -100px">
+                <div id="plan" style="display:none"><canvas id="myCanvas"></canvas><!-- <h2 onClick="Close();" style="cursor:pointer; display:inline-block">关闭</h2> --></div>
+            </div>
+            <img src="" fileName="" id="hit" style="display:none;z-index: 9">
+
+            <div id="cover"></div>
+        </div>
+        <!--加载头像资源结束-->
+    </body>
+    <script src="../resourcejs/jquery-2.1.0.min.js"></script>
+        <script src="../resource/js/sonic.js"></script>
+        <script src="../resource/js/comm.js"></script>
+        <script src="../resource/js/hammer.js"></script>
+        <script src="../resource/js/iscroll-zoom.js"></script>
+        <script src="../resource/js/jquery.photoClip.js?v=1"></script>
+        <script>
+        var agent_id = '{$agent_id}';
+        var hammer = '';
+        var currentIndex = 0;
+        var body_width = $('body').width();
+        var body_height = $('body').height();
+        nick = $("input[name='nick']").val();
+        phone = $("input[name='username']").val();
+        function check1(){
+            nick = $("input[name='nick']").val();
+            check()
+        }
+        function check2(){
+            phone = $("input[name='username']").val();
+            check();
+        }
+        function check(){
+            if(nick && phone){
+                $('.queren').css('color','#fff');
+            }else{
+                $('.queren').css('color','#fba59b');
+            }
+        }
+        
+        $("#clipArea").photoClip({
+            width: body_width * 0.8125,
+            height: body_width * 0.8125,
+            file: "#file",
+            view: "#hit",
+            ok: "#clipBtn",
+            loadStart: function () {
+                //console.log("照片读取中");
+                $('.lazy_tip span').text('');
+                $('.lazy_cover,.lazy_tip').show();
+            },
+            loadComplete: function () {
+                //console.log("照片读取完成");
+                $('.lazy_cover,.lazy_tip').hide();
+            },
+            clipFinish: function (dataURL) {
+                $('#hit').attr('src', dataURL);
+                saveImageInfo();
+            }
+        });
+
+        //图片上传
+        function saveImageInfo() {
+            var filename = $('#hit').attr('fileName');
+            var img_data = $('#hit').attr('src');
+            if(img_data==""){alert('null');}
+            //alert(filename+'|'+img_data);
+            render(img_data); 
+            
+            
+        }
+
+        /*获取文件拓展名*/
+        function getFileExt(str) {
+            var d = /\.[^\.]+$/.exec(str);
+            return d;
+        }
+
+        //图片上传结束
+        $(function () {
+            $('#upload2').on('touchstart', function () {
+                //alert("11")
+                //图片上传按钮
+                $('#file').click();
+            });
+        })
+
+
+        // function Close(){$('#plan').hide();}
+
+        // 渲染 Image 缩放尺寸  
+        function render(src){  
+             var MAX_HEIGHT = 200;  //Image 缩放尺寸 
+            // 创建一个 Image 对象  
+            var image = new Image();  
+            
+            // 绑定 load 事件处理器，加载完成后执行  
+            image.onload = function(){  
+                // 获取 canvas DOM 对象  
+                var canvas = document.getElementById("myCanvas"); 
+                // 如果高度超标  
+                if(image.height > MAX_HEIGHT) {  
+                    // 宽度等比例缩放 *=  
+                    image.width *= MAX_HEIGHT / image.height;  
+                    image.height = MAX_HEIGHT;  
+                }  
+                // 获取 canvas的 2d 环境对象,  
+                // 可以理解Context是管理员，canvas是房子  
+                var ctx = canvas.getContext("2d");  
+                // canvas清屏  
+                ctx.clearRect(0, 0, canvas.width, canvas.height); 
+                canvas.width = image.width;        // 重置canvas宽高  
+                canvas.height = image.height;  
+                // 将图像绘制到canvas上  
+                ctx.drawImage(image, 0, 0, image.width, image.height);  
+                // !!! 注意，image 没有加入到 dom之中  
+                
+             var dataurl = canvas.toDataURL("image/jpeg");  
+             var imagedata =  encodeURIComponent(dataurl); 
+                $('#plan').attr('data-src',dataurl); 
+                $('#bg').attr('src',dataurl); 
+              $('#plan').show();
+            };  
+            // 设置src属性，浏览器会自动加载。  
+            // 记住必须先绑定render()事件，才能设置src属性，否则会出同步问题。  
+            image.src = src;
+            $('input[name="user_pic"]').val(src);
+        };  
+        function qr(){
+            if(nick.match(/^\s*$/)){
+                alert("请输入昵称");
+                return false;
+            }
+            if(!phone.match(/^1[3|4|5|7|8]\d{9}$/)){
+                alert("请输入正确手机号");
+                return false;
+            }
+            $.post('{:U("Account/edit_five")}',$("#formsubmit").serialize(),function(res){
+                if(res.status == 1){
+                    alert(res.info);
+                    window.location.href="{:U('five_tiao')}?agent_id=" + agent_id;
+                }else{
+                    alert(res.info);
+                }
+            });
+        }
+    </script>
+</html>
+<script type="text/javascript">
+    $(function(){
+        $('.nansex1').click(function(event) {
+                $(this).addClass('color_nv');
+                $(this).siblings().removeClass('color_blue')
+        });
+         $('.nansex2').click(function(event) {
+                $(this).addClass('color_blue');
+                $(this).siblings().removeClass('color_nv')
+        });
+         $('.yizu1').click(function(event) {
+                $('.big_box').show();
+         });
+         $('#clipBtn').click(function(event) {
+                $('.big_box').hide()
+         });
+         $('.sure_box').click(function(event) {
+                $(this).css({'background':'#1dca00','color':'#fff'})
+         });
+    })
+</script>

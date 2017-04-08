@@ -1,0 +1,5 @@
+html,body{width: 100%;height: 100%;background:#e7e7e7;}
+.wrap{width: 100%;height: 100%;background:#e7e7e7;}
+.ewm_box{width: 15rem;height: 20rem;margin:5rem auto 0;background:#fff;padding-top:6rem;box-sizing: border-box;box-shadow: 0 0 16px #CECECE;}
+.ewm_box img{width: 8rem;height: 8rem;margin:0 auto 0;display: block;}
+.haowan{text-align: center;color:#333;font-size:0.9rem;margin-top: 3rem;}

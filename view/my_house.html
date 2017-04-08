@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+        <meta name="apple-mobile-web-app-capable" content="yes" /><!-- 删除苹果默认的工具栏和菜单栏 -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="black" /><!-- 设置苹果工具栏颜色 -->
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <meta name="format-detection" content="telephone=no, email=no" /><!-- 忽略页面中的数字识别为电话，忽略email识别 -->
+        <!-- 启用360浏览器的极速模式(webkit) -->
+        <meta name="renderer" content="webkit">
+        <!-- 避免IE使用兼容模式 -->
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <!-- 针对手持设备优化，主要是针对一些老的不识别viewport的浏览器，比如黑莓 -->
+        <meta name="HandheldFriendly" content="true">
+        <!-- 微软的老式浏览器 -->
+        <meta name="MobileOptimized" content="320">
+        <!-- uc强制竖屏 -->
+        <meta name="screen-orientation" content="portrait">
+        <!-- QQ强制竖屏 -->
+        <meta name="x5-orientation" content="portrait">
+        <!-- UC强制全屏 -->
+        <meta name="full-screen" content="yes">
+        <!-- QQ强制全屏 -->
+        <meta name="x5-fullscreen" content="true">
+        <!-- UC应用模式 -->
+        <meta name="browsermode" content="application">
+        <!-- QQ应用模式 -->
+        <meta name="x5-page-mode" content="app">
+        <!-- windows phone 点击无高光 -->
+        <meta name="msapplication-tap-highlight" content="no">
+        <meta content="width=device-width, initial-scale=1, maximum-scale=1.2, user-scalable=0" name="viewport" />
+        <title>商城列表</title>
+        <link rel="stylesheet" href="../resource/css/global.css" />
+        <link rel="stylesheet" href="../resource/css/my_country.css" />
+        <script type="text/javascript" src="../resource/js/jquery-1.11.1.min.js"></script>
+</head>
+<body>
+    <div class="wrap" style="height:100%;overflow:hidden;">
+       <div class="box" style="height:35rem;">
+           <ul>
+               <li>
+                   <div class="lpu">
+                       <img src="../resource/images/bg.png" alt="" />
+                   </div>
+                   <p class="name_box">春夏动物新宝</p>
+                   <p class="ssjj">时尚简约</p>
+                   <div class="lia_box">
+                       <span class="prc">￥1861</span>
+                       <div class="shiyang">适养<span>1236</span>只</div>
+                   </div>
+               </li>
+               <li>
+                   <div class="lpu">
+                       <img src="../resource/images/bg.png"  alt="" />
+                   </div>
+                   <p class="name_box">春夏动物新宝</p>
+                   <p class="ssjj">时尚简约</p>
+                   <div class="lia_box">
+                       <span class="prc">￥1861</span>
+                       <div class="shiyang">适养<span>1236</span>只</div>
+                   </div>
+               </li>
+               <li>
+                   <div class="lpu">
+                       <img src="../resource/images/bg.png"  alt="" />
+                   </div>
+                   <p class="name_box">春夏动物新宝</p>
+                   <p class="ssjj">时尚简约</p>
+                   <div class="lia_box">
+                       <span class="prc">￥1861</span>
+                       <div class="shiyang">适养<span>1236</span>只</div>
+                   </div>
+               </li>
+           </ul>
+       </div>
+    </div>
+     <!-- 购买弹框 -->
+    <div class="zj_bglayer zj_bglayer1">
+        <div class="bai_layer">
+            <div class="del"></div>
+            <input type="number" class="ipt" placeholder="请填写购买数量"/>
+            <div class="zyshl">
+                <div class="iptr"><input type="checkbox"/></div>
+                <span>有复投币自动抵扣</span>
+            </div>
+            <div class="yhsh yhsh1">立即购买</div>
+        </div>
+    </div>
+    <!-- 购买弹框结束 -->
+    <!-- 购买成功弹框 -->
+    <div class="zj_bglayer zj_bglayer2">
+        <div class="bai_layer">
+            <div class="del"></div>
+            <div class="xiaol"></div>
+            <p class="zyshl">购买成功</p>
+            <div class="yhsh" onclick='javascript:location.href="my_index.html"'>查看新窝</div>
+        </div>
+    </div>
+    <!-- 购买成功弹框结束 -->
+</body>
+</html>
+<script type="text/javascript" src="../resource/js/jquery.touchSwipe.min.js"></script>
+<script type="text/javascript">
+    $(function(){
+        $('.box li').click(function(event) {
+                $('.zj_bglayer1').show();
+        });
+        $(document).on('click','.iptr input',function(event) {
+                var my_index=$(this)
+                if($(my_index).is(':checked')){
+                    $('.iptr').addClass('lv_dot')
+                }else{
+                    $('.iptr').removeClass('lv_dot')
+                }
+        });
+        $(document).on('click','.del',function(){
+            $(this).parents('.zj_bglayer').hide();
+        })
+        $(document).on('click','.yhsh1',function(){
+            $('.zj_bglayer2').show();
+            $('.zj_bglayer1').hide();
+        })
+    })
+</script>

@@ -1,0 +1,37 @@
+html,body{width: 100%;height: 100%;}
+.wrap{width: 100%;background:url(../images/senlin.png);background-size:100%;min-height:100%;}
+.box{width: 95%;margin:0 auto;background:rgba(255,255,255,0.5);padding:0 1rem;box-sizing: border-box;padding-top: 1rem;min-height:100%;}
+.box ul{overflow: hidden;width: 17.5rem;margin:0 auto;}
+.box ul li{float: left;width: 8.5rem;background:#fff;margin-bottom: 0.8rem;}
+.box ul li:nth-of-type(2n){margin-left: 0.5rem;}
+.lpu{background:#c28e4a;width: 8.5rem;padding:0.3rem;box-sizing: border-box;height: 8.5rem;position:relative;}
+.lpu img{height: 7.9rem;width: 7.9rem;display: block;margin:0 auto;}
+.name_box{color:#333;font-size:0.85rem;margin-left: 0.4rem;}
+.ssjj{margin-left: 0.4rem;overflow: hidden;color:#666;font-size:0.8rem;}
+.lia_box{overflow: hidden;}
+.prc{float: left;color:#d81e55;font-size:1rem;line-height: 1.5rem;}
+.shiyang{float: right;margin-right: 0.4rem;color:#ff7800;font-size:0.75rem;line-height: 1.5rem;}
+.suo{width: 100%;height: 100%;background:url(../images/suo.png)no-repeat center center rgba(208,196,181,0.83);background-size:45%;position:absolute;left:0;top:0;}
+.zj_bglayer{width: 100%;height: 100%;background:rgba(0,0,0,0.5);position:fixed;left:0;top:0;left:0;top:0;z-index: 2;display: none;}
+.bai_layer{width: 16rem;background:#fff;position:absolute;left:50%;margin-left: -8rem;padding-top: 2.2rem;padding-bottom: 2.2rem;top:50%;margin-top: -9.1rem;border-radius: 10px;}
+.del{width: 2rem;height: 2rem;background:url(../images/del.png) no-repeat center center;background-size:contain;position:absolute;top:0;right:1rem;}
+.xiaol{margin:0 auto;width: 4rem;height: 4rem;background:url(../images/gou.png) no-repeat center center;background-size:contain;}
+.zyshl{color:#666;font-size:1rem;text-align: center;overflow: hidden;width: 10rem;margin:2rem auto 0;}
+.yhp{text-align: center;font-size:0.8rem;color:#666;}
+.yhp span{color:#1dca00;font-size:1rem;}
+.yhsh{width: 12rem;height:2.3rem;margin:2rem auto 0;background:#1dca00;border-radius: 3rem;color:#fff;font-size:1.1rem;line-height: 2.3rem;text-align: center;}
+.ipt{display: block;margin:0 auto;width: 12rem;height: 2.5rem;line-height: 2.5rem;border:1px solid #1dca00;border-radius: 5px;font-size:1rem;padding-left: 10px;box-sizing: border-box;outline-style: none;margin-top: 0.9rem;}
+.iptr{float: left;width: 1.3rem;height: 1.3rem;background:url(../images/dot.png) no-repeat center center;background-size:contain;}
+.lv_dot{background:url(../images/lvgou.png) no-repeat center center;background-size:contain;}
+.iptr input{width: 100%;height: 100%;opacity:0;}
+.dazi{font-size:1.6rem;color:#333;text-align: center;}
+.ssan{overflow: hidden;width: 12rem;margin:0.9rem auto 0;}
+.sspan{float: right;}
+.sspan span{float: left;width: 2rem;height: 2rem;color:#333;text-align: center;line-height: 2rem;font-size:1.2rem;}
+.sspan .span1{background:url(../images/huijian.png) no-repeat center center;background-size:contain;}
+.sspan .span11{background:url(../images/lvjian.png) no-repeat center center;background-size:contain;}
+.sspan .span3{background:url(../images/lvjia.png) no-repeat center center;background-size:contain;}
+.zyshl1{color:#333;font-size:0.9rem;text-align: center;overflow: hidden;width: 100%;margin:2rem auto 0;}
+.zyshl1 span{color:#1dca00;font-size:1.1rem;}
+.xiaol2{background:url(../images/share.png) no-repeat center center;background-size:contain;margin-top: 3rem;width: 5rem;height:5rem;}
+.zj_bglayer3 .xiaol{background:url(../images/huan.png) no-repeat center center;background-size:contain;margin-top: 1rem;width: 5rem;height:5rem;}
